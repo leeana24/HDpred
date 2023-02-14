@@ -1,0 +1,64 @@
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Heart Disease Predictor</title>
+
+    </head>
+	<style>
+        body{
+	background-color: #ffffff;
+}
+h1{
+	text-decoration: underline;
+	color: #507DBC;
+	font-size: 48px;
+	text-align:center;
+}
+h5{
+color: #d06d49;
+	font-size: 12px;
+	text-align: left;
+}
+p{
+	text-align: left;
+	font-size: 14px;
+	color: #873b84;
+}
+.m{
+	color: #d06d49;
+	font-size: 24px;
+	text-align: left;
+}
+
+	</style>
+
+
+
+
+        <h1>Coronary Heart Disease Risk Predictor</h1><br>
+        
+        <form action='/predict' method="POST">
+           <b> <p class = "m">BMI :</p>  <input type="text", name='a', placeholder="enter whole integer"><a href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/english_bmi_calculator/bmi_calculator.html">BMI Calculator</a> <br><br>
+           <p class = "m">Heavy Smoker? :</p>  <input type="text", name='b', placeholder="Type 1 for Yes, 0 for No"><p font-size=8px>(Have you smoked more than 100 cigarettes in your life time?)</p> <br>
+           <p class = "m">Alcohol Drinking :</p>  <input type="text", name='c', placeholder="Type 1 for Yes, 0 for No"> <p>(Adult men having more than 14 drinks per week and adult women having more than 7 drinks per week)</p><br>
+            <p class = "m">Do you have serious difficulty walking or climbing stairs:</p> <input type="text", name='d', placeholder="Type 1 for Yes, 0 for No"> <br><br><br>
+						 <p class = "m">Are you biologically male or female?:</p>  <input type="text", name='e', placeholder="Type 1 for Male, 0 for Female"> <br><br><br>
+						<p class = "m"> What is your age?:</p>  <input type="text", name='f', placeholder="Check below"> <p>(Type 0 if 18-24, 1 if 25-29, 2 if 30-34, 3 if 35-39, 4 if 40-44, 5 if 45-49, 6 if 50-54, 7 if 55-59, 8 if 60-64, 9 if 65-69, 10 if 70-74, 11 if 75-79, and 12 if 80 or above)</p><br>
+						  <p class = "m">What is your race?:</p>  <input type="text", name='g', placeholder="Check Below"> <p>(Type 0 for American Indian/Alaskan Native, 1 for Asian, 2 for Black, 3 for Hispanic, 4 for Other, and 5 for White.)</p><br>
+               <p class = "m">Have you ever had or have diabetes?:</p>  <input type="text", name='h', placeholder="Check Below"> <p>(Type 0 for No, 1 for Boderline, and 2 for Yes)</p><br><br>
+						 <p class = "m">Have you done any physical activity in the past 30 days other than your regular job?:</p>  <input type="text", name='i', placeholder="Type 1 for Yes, 0 for No"> <br><br><br>
+						 <p class = "m">How is your general health?:</p>  <input type="text", name='j', placeholder="Check Below"> <p>(Type 0 for Excellent, 1 for Fair, 2 for Good, 3 for poor, and 4 for Very Good)</p><br><br>
+						 <p class = "m">On average, how many hours of sleep do you get in a 24-hour period?:</p>  <input type="text", name='k', placeholder="# of hours"> <br><br>
+						 <br></b>
+            <input type="submit" , value='Predict!' >
+
+        </form>
+	<br><h4 align="center"><b> {{ pred }} </b></h4>
+    <h2><a href="https://forms.gle/hsZbaxMKYr9EVcUKA"> Please fill out upon completion</a></h2>
+        
+        
+
+
+    </body>
+</html>
